@@ -1,21 +1,11 @@
 # Combinatrix
- Derive possible combinations and permutations
-
-
-# Combinatrix
 
 ## Overview
+With Combinatrix, you can now effortlessly calculate the number of ways to arrange or select items from a set of choices in your Python projects. Combinatrix is a simple Python library that provides functions to calculate the number of permutations and combinations of a set of items. The library is useful in various scenarios, including probability, statistics, and cryptography.
 
-Combinatrix is a Python library that provides functions for calculating permutations and combinations of choosing items from a given set of possible choices. It is particularly useful in scenarios where you need to count the number of ways to arrange or select elements from a set. The library contains a single function called `calc_permutations_combinations`, which takes the number of possible choices, the number of choices to make, and an optional flag to allow repetitions, and returns the number of combinations and permutations.
-
-## Installation
-
-To use Combinatrix, simply copy the `combinatrix.py` file into your project directory or any location accessible by your Python environment.
+Combinatrix contains a single function called `calc_permutations_combinations`, which takes the number of possible choices, the number of choices to make, and an optional flag to allow repetitions, and returns the number of combinations and permutations.
 
 ## Function: `calc_permutations_combinations`
-
-### Signature
-
 ```python
 def calc_permutations_combinations(number_of_possible_choices, number_of_choices_to_make, allow_repetitions=True)
 ```
@@ -29,6 +19,7 @@ def calc_permutations_combinations(number_of_possible_choices, number_of_choices
 ### Returns
 
 (tuple): A tuple containing two integers - (combinations, permutations).
+
 
 ## Permutations and Combinations
 
@@ -52,42 +43,76 @@ nCr = (n + r - 1)! / (r! * (n - 1)!)
 
 where `n` is the total number of items, `r` is the number of items to select, and `!` represents the factorial function.
 
-## Test Cases
 
+
+
+# Combinatorics: Combinations and Permutations
+Combinatorics is a branch of mathematics that deals with the study of discrete structures and the enumeration of arrangements and selections. Combinatorics is concerned with counting and arranging objects or events. It has applications in computer science, cryptography, probability, statistics, and various other areas. This code focuses on two fundamental priciples in combinatorics: combinations and permutations.
+
+**2. Combinations:**
+Combinations refer to the selection of items from a set without considering the order. The number of combinations of `k` objects chosen from a set of `n` distinct objects is denoted by C(n, k) or "n choose k."
+
+**2.1. Combinations Equation:**
+The formula for combinations is given by:
+```
+C(n, k) = n! / (k! * (n - k)!)
+```
+where:
+- `n!` is the factorial of `n`, i.e., the product of all positive integers from 1 to `n`.
+- `k!` is the factorial of `k`.
+- `(n - k)!` is the factorial of the difference between `n` and `k`.
+
+**3. Permutations:**
+Permutations refer to the arrangement of items from a set in a specific order. The number of permutations of `k` objects chosen from a set of `n` distinct objects is denoted by P(n, k) or "n P k" or "nPk."
+
+![Permutations](Images/4-digit_combination_padlock.jpg)
+
+**3.1. Permutations Equation:**
+The formula for permutations is given by:
+```
+P(n, k) = n! / (n - k)!
+```
+where:
+- `n!` is the factorial of `n`.
+- `(n - k)!` is the factorial of the difference between `n` and `k`.
+
+**4. Relationship between Combinations and Permutations:**
+The relationship between combinations and permutations can be expressed as follows:
+```
+P(n, k) = k! * C(n, k) 
+```
+This relationship shows that permutations can be obtained by multiplying combinations with `k!`.
+
+**5. Applications of Combinatorics:**
+Combinatorics plays a crucial role in computing probabilities of events and handling discrete probability distributions. Combinatorial techniques are used in designing cryptographic algorithms, generating secure keys, and analyzing cryptographic systems' properties. In network theory, combinatorics helps in analyzing connectivity, paths, and cycles in graphs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Test Cases
 The library includes a set of test cases to verify the correctness of the `calc_permutations_combinations` function. These test cases cover various scenarios, including edge cases. The function is tested with both combinations and permutations calculations, with and without repetitions.
 
-## Example Usage
-
-```python
-import combinatrix
-
-# Calculate combinations and permutations with repetitions allowed
-combinations, permutations = combinatrix.calc_permutations_combinations(10, 4, True)
-print(f"Combinations: {combinations}, Permutations: {permutations}")
-
-# Calculate combinations and permutations without repetitions
-combinations, permutations = combinatrix.calc_permutations_combinations(6, 2, False)
-print(f"Combinations: {combinations}, Permutations: {permutations}")
-```
-
-The above code will output:
-
-```
-Combinations: 715, Permutations: 10000
-Combinations: 15, Permutations: 30
-```
 
 ## License
-
 Combinatrix is distributed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## Author
-
-Combinatrix is authored by Adill Al-Ashgar.
 
 ## Contributions
 
-Contributions to Combinatrix are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or a pull request on the [GitHub repository](https://github.com/username/repo).
+Contributions to Combinatrix are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or a pull request on the [GitHub repository](https://github.com/adillwma/combinatrix).
 
 ---
-With Combinatrix, you can now effortlessly calculate the number of ways to arrange or select items from a set of choices in your Python projects. Happy coding!
