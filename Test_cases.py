@@ -13,6 +13,9 @@ def run_test_cases(test_cases):
         print()
 
 test_cases = [
+        # Format:
+        # (number_of_possible_choices, number_of_choices_to_make, allow_repetitions, expected_combinations, expected_permutations)
+
         # Test cases with repetitions allowed
         (10, 4, True, 715, 10000),  # A combination lock with four rings, each ring has 10 possible choices (0-9)
         (5, 3, True, 35, 125),   # Three different dice, each with 5 sides (1-5)
