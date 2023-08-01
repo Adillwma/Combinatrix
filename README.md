@@ -24,7 +24,7 @@ Combinatrix contains a single function called `calc_permutations_combinations`, 
 
 ### Permutations
 
-A permutation is an arrangement of items in a specific order i.e., represents the number of ways we can select `r` items from a set of `n` items when repetitions are not allowed. The formula to calculate permutations is:
+A permutation is an arrangement of items in a specific order i.e., represents the number of ways we can select `r` items from a set of `n` items when the ordering of the selection does matter. The formula to calculate permutations is:
 
 ```
 nPr = n! / (n - r)!
@@ -32,14 +32,14 @@ nPr = n! / (n - r)!
 
 where `n` is the total number of items, `r` is the number of items to select, and `!` represents the factorial function.
 
-
+A good example of permutations is a combination lock. A combination lock has a set of `n` numbers (0-9) and a combination of `r` numbers (4). The order of the numbers in the combination matters. For example, `1234` is not the same as `4321`.
 
 <img src="Images/4-digit_combination_padlock.jpg" alt="Permutations" style="width: 200px;">
 
 
 ### Combinations
 
-A combination, on the other hand, represents the number of ways we can select `r` items from a set of `n` items when repetitions are allowed. The formula to calculate combinations is:
+A combination, on the other hand, represents the number of ways we can select `r` items from a set of `n` items when the ordering is not considered. The formula to calculate combinations is:
 
 ```
 nCr = (n + r - 1)! / (r! * (n - 1)!)
@@ -47,6 +47,7 @@ nCr = (n + r - 1)! / (r! * (n - 1)!)
 
 where `n` is the total number of items, `r` is the number of items to select, and `!` represents the factorial function.
 
+An example of this is purchising a ticket for a lottery, for most of which the order of the numbers you select does not matter. For example, if you select the numbers `1, 2, 3, 4, 5, 6` for a lottery and they are the numbers picked, you will win the same as if you selected the numbers `6, 1, 4, 2, 3, 5`.
 
 <img src="Images/Lottery.jpg" alt="Combinations" style="width: 400px;">
 
